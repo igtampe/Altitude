@@ -12,9 +12,6 @@
         /// <summary>Image of this day</summary>
         public string ImageURL { get; set; } = "";
 
-        /// <summary>Trip this Day is tied to</summary>
-        public Trip? Trip { get; set; }
-
         /// <summary>Index of this item</summary>
         public int Index { get; set; } = -1;
 
