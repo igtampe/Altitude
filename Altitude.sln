@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igtampe.Altitude.Data", "Ig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igtampe.Altitude.API", "Igtampe.Altitude.API\Igtampe.Altitude.API.csproj", "{AB1F1263-790E-4E76-B432-547FD253379D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPA", "SPA\SPA.csproj", "{654278FC-CAF6-4532-B3B8-3F432FBFF00B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AB1F1263-790E-4E76-B432-547FD253379D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB1F1263-790E-4E76-B432-547FD253379D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB1F1263-790E-4E76-B432-547FD253379D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654278FC-CAF6-4532-B3B8-3F432FBFF00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654278FC-CAF6-4532-B3B8-3F432FBFF00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654278FC-CAF6-4532-B3B8-3F432FBFF00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654278FC-CAF6-4532-B3B8-3F432FBFF00B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
