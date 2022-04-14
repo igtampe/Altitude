@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Igtampe.Altitude.API</name>
+    </assembly>
+    <members>
+        <member name="T:Igtampe.Altitude.API.Controllers.AltitudeImageController">
+            <summary>An Image Controller for Altitude</summary>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeImageController.#ctor(Igtampe.Altitude.Data.AltitudeContext)">
+            <summary>Creates an Altitude Image Controller</summary>
+            <param name="Context"></param>
+        </member>
+        <member name="T:Igtampe.Altitude.API.Controllers.AltitudeUserController">
+            <summary>A Controller for Altitude Users</summary>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeUserController.#ctor(Igtampe.Altitude.Data.AltitudeContext)">
+            <summary>Creates an Altitude User Controller</summary>
+            <param name="Context"></param>
+        </member>
+    </members>
+</doc>
