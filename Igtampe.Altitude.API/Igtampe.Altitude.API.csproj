@@ -33,6 +33,9 @@
     <Reference Include="Igtampe.DBContexts">
       <HintPath>..\..\ChopoWebAPICommons\Igtampe.DBContexts\bin\Debug\net6.0\Igtampe.DBContexts.dll</HintPath>
     </Reference>
+    <Reference Include="Igtampe.Interfaces">
+      <HintPath>..\..\ChopoWebAPICommons\Igtampe.Interfaces\bin\Debug\net6.0\Igtampe.Interfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

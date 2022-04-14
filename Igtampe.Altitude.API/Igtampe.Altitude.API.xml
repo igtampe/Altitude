@@ -11,12 +11,143 @@
             <summary>Creates an Altitude Image Controller</summary>
             <param name="Context"></param>
         </member>
+        <member name="T:Igtampe.Altitude.API.Controllers.AltitudeTripController">
+            <summary>Controller for Trips in Altitude</summary>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.#ctor(Igtampe.Altitude.Data.AltitudeContext)">
+            <summary>Creates an Altitude Trip Controller</summary>
+            <param name="Context"></param>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.GetOwned(System.Nullable{System.Guid})">
+            <summary>Gets a list of all trips owned by logged in user</summary>
+            <param name="SessionID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.GetShared(System.Nullable{System.Guid})">
+            <summary>Get a list of all trips shared by the logged in user</summary>
+            <param name="SessionID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.GetShareData(System.Nullable{System.Guid},System.Guid)">
+            <summary>Get ShareData for for this trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.AddShareData(System.Nullable{System.Guid},System.Guid,Igtampe.Altitude.API.Requests.ShareDataRequest)">
+            <summary>Add a user to the ShareData of this trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.RemoveShareDAta(System.Nullable{System.Guid},System.Guid,Igtampe.Altitude.API.Requests.ShareDataRequest)">
+            <summary>Remove a user from the ShareData of this trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.GetTrip(System.Nullable{System.Guid},System.Guid)">
+            <summary>Gets a specified trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.CreateTrip(System.Nullable{System.Guid},Igtampe.Altitude.API.Requests.TripRequest)">
+            <summary>Creates a trip</summary>
+            <param name="SessionID"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.EditTrip(System.Nullable{System.Guid},System.Guid,Igtampe.Altitude.API.Requests.TripRequest)">
+            <summary>Edits a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.DeleteTrip(System.Nullable{System.Guid},System.Guid)">
+            <summary>Deletes a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
         <member name="T:Igtampe.Altitude.API.Controllers.AltitudeUserController">
             <summary>A Controller for Altitude Users</summary>
         </member>
         <member name="M:Igtampe.Altitude.API.Controllers.AltitudeUserController.#ctor(Igtampe.Altitude.Data.AltitudeContext)">
             <summary>Creates an Altitude User Controller</summary>
             <param name="Context"></param>
+        </member>
+        <member name="T:Igtampe.Altitude.API.Requests.DayRequest">
+            <summary>Request to edit details of a Day</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.DayRequest.Name">
+            <summary>Name of this day</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.DayRequest.Description">
+            <summary>Description of this day</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.DayRequest.ImageURL">
+            <summary>Image of this day</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.DayRequest.Color">
+            <summary>Color associated to this event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.DayRequest.Icon">
+            <summary>Icon associated to this event</summary>
+        </member>
+        <member name="T:Igtampe.Altitude.API.Requests.EventRequest">
+            <summary>Request to edit the details of an event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Name">
+            <summary>Name of the event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Description">
+            <summary>Description of the event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.ImageURL">
+            <summary>Image of this Event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Color">
+            <summary>Color associated to this event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Icon">
+            <summary>Icon associated to this event</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Hour">
+            <summary>Hour this event takes place on</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.Minute">
+            <summary>Minute this event takes place on</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.EventRequest.ReminderTime">
+            <summary>Time at which a reminder for this </summary>
+        </member>
+        <member name="T:Igtampe.Altitude.API.Requests.ShareDataRequest">
+            <summary>Request to edit ShareData of a Trip</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.ShareDataRequest.Username">
+            <summary>Username to share this ShareData with</summary>
+        </member>
+        <member name="T:Igtampe.Altitude.API.Requests.TripRequest">
+            <summary>Request to edit details of a trip</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.TripRequest.Name">
+            <summary>Name of this trip</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.TripRequest.Description">
+            <summary>Description of this trip</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.TripRequest.ImageURL">
+            <summary>Image of this trip</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.TripRequest.Public">
+            <summary>Whether or not this trip is public or not</summary>
+        </member>
+        <member name="P:Igtampe.Altitude.API.Requests.TripRequest.StartDate">
+            <summary>The date this trip starts on</summary>
         </member>
     </members>
 </doc>
