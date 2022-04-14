@@ -57,5 +57,19 @@ namespace Igtampe.Altitude.Data {
             .ThenInclude(A => A!.Events.OrderBy(A => A.Index))
             .Select(A=>A.Trip)!;
 
+        /// <summary>Gets an IQueryable with a specific trip</summary>
+        /// <param name="Username"></param>
+        /// <param name="ID"></param>
+        /// <returns>A Tuple with a Trip, and a boolean on whether or not this user can edit it</returns>
+        public async Task<(Trip?,bool)> GetTrip(string Username, Guid ID) {
+
+            //Let's find the trip
+            var AllPossibleTrips = PublicTrips.Union(UserTrips(Username)).Union(UserSharedTrips(Username));
+            return new(
+                await AllPossibleTrips.Where(A => A.ID == ID).FirstOrDefaultAsync(), 
+                await UserTrips(Username).AnyAsync(A=>A.ID==ID)
+            );
+            
+        }
     }
 }
