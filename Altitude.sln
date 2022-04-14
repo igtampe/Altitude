@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igtampe.Altitude.Data", "Ig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igtampe.Altitude.API", "Igtampe.Altitude.API\Igtampe.Altitude.API.csproj", "{AB1F1263-790E-4E76-B432-547FD253379D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPA", "SPA\SPA.csproj", "{654278FC-CAF6-4532-B3B8-3F432FBFF00B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igtampe.Altitude.SPA", "Igtampe.Altitude.SPA\Igtampe.Altitude.SPA.csproj", "{654278FC-CAF6-4532-B3B8-3F432FBFF00B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

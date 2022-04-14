@@ -364,5 +364,5 @@ FodyWeavers.xsd
 /Igtampe.Altitude.Data/DBURL.txt
 /Igtampe.Altitude.API/AUTH_SALT.txt
 /Igtampe.Altitude.API/DBURL.txt
-/SPA/DBURL.txt
-/SPA/AUTH_SALT.txt
+/Igtampe.Altitude.SPA/AUTH_SALT.txt
+/Igtampe.Altitude.SPA/DBURL.txt
