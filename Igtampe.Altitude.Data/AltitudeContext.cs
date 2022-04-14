@@ -45,16 +45,14 @@ namespace Igtampe.Altitude.Data {
         /// <param name="Username">Username</param>
         /// <returns></returns>
         public IQueryable<Trip> UserTrips(string Username) => TripIncludes
-            .Where(A => A.Owner != null && A.Owner.Username == Username);
+            .Include(A=>A.ShareData).Where(A => A.Owner != null && A.Owner.Username == Username);
 
         /// <summary>Gets all trips that have been shared with this user</summary>
         /// <param name="Username"></param>
         /// <returns></returns>
         public IQueryable<Trip> UserSharedTrips(string Username) => TripShareData
             .Where(A=>A.User != null && A.User.Username == Username && A.Trip!=null)
-            .Include(A => A.Trip)
-            .ThenInclude(A => A!.Days.OrderBy(A => A.Index))
-            .ThenInclude(A => A!.Events.OrderBy(A => A.Index))
+            .Include(A => A.Trip).ThenInclude(A => A!.Days.OrderBy(A => A.Index)).ThenInclude(A => A!.Events.OrderBy(A => A.Index))
             .Select(A=>A.Trip)!;
 
         /// <summary>Gets an IQueryable with a specific trip</summary>
