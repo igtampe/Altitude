@@ -1,5 +1,6 @@
 ﻿using Igtampe.ChopoAuth;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Igtampe.Altitude.Common {
     
@@ -28,6 +29,7 @@ namespace Igtampe.Altitude.Common {
         public bool Public { get; set; } = false;
 
         /// <summary>ShareData for this trip</summary>
+        [JsonIgnore]
         public List<TripShareData> ShareData { get; set; } = new();
 
         /// <summary>The date this trip starts on</summary>
