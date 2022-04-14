@@ -73,6 +73,109 @@
             <param name="ID"></param>
             <returns></returns>
         </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.AddDay(System.Nullable{System.Guid},System.Guid,Igtampe.Altitude.API.Requests.DayRequest)">
+            <summary>Add a day to a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.EditDay(System.Nullable{System.Guid},System.Guid,System.Int32,Igtampe.Altitude.API.Requests.DayRequest)">
+            <summary>Edit a day in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveDayUp(System.Nullable{System.Guid},System.Guid,System.Int32)">
+            <summary>Move a day up one in the list of days in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveDayDown(System.Nullable{System.Guid},System.Guid,System.Int32)">
+            <summary>Move a day down one in this list of days in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveDay(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32)">
+            <summary>Moves a day to a new index</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.RemoveDay(System.Nullable{System.Guid},System.Guid,System.Int32)">
+            <summary>Removes a day from a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.AddEvent(System.Nullable{System.Guid},System.Guid,System.Int32,Igtampe.Altitude.API.Requests.EventRequest)">
+            <summary>Add an Event to a Day in a Trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.EditEvent(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32,Igtampe.Altitude.API.Requests.EventRequest)">
+            <summary>Edit an event in a day in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <param name="Request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveEventUp(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32)">
+            <summary>Move an event up one in the list of events in a day in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveEventDown(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32)">
+            <summary>Move an event down one in the list of events in a day in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveEvent(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32,System.Int32)">
+            <summary>Move an event to a specified index in the list of events in a day in a trip</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.MoveEventToOtherDay(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32,System.Int32)">
+            <summary>Move an event from one day to another day</summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Igtampe.Altitude.API.Controllers.AltitudeTripController.RemoveEvent(System.Nullable{System.Guid},System.Guid,System.Int32,System.Int32)">
+            <summary>Remove a day </summary>
+            <param name="SessionID"></param>
+            <param name="ID"></param>
+            <param name="Day"></param>
+            <param name="Event"></param>
+            <returns></returns>
+        </member>
         <member name="T:Igtampe.Altitude.API.Controllers.AltitudeUserController">
             <summary>A Controller for Altitude Users</summary>
         </member>
