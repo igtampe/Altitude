@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Igtampe.Altitude.Common\Igtampe.Altitude.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Igtampe.ChopoAuth">
+      <HintPath>..\..\ChopoWebAPICommons\Igtampe.ChopoAuth\bin\Debug\net6.0\Igtampe.ChopoAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Igtampe.ChopoImageHandling">
+      <HintPath>..\..\ChopoWebAPICommons\Igtampe.ChopoImageHandling\bin\Debug\net6.0\Igtampe.ChopoImageHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Igtampe.DBContexts">
+      <HintPath>..\..\ChopoWebAPICommons\Igtampe.DBContexts\bin\Debug\net6.0\Igtampe.DBContexts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
