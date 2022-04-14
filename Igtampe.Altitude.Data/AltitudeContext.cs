@@ -11,6 +11,9 @@ namespace Igtampe.Altitude.Data {
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
+        /// <summary>Set of all TripShareData</summary>
+        public DbSet<TripShareData> TripShareData { get; set;}
+
         /// <summary>Set of all Trips</summary>
         public DbSet<Trip> Trip { get; set; }
 
@@ -28,12 +31,31 @@ namespace Igtampe.Altitude.Data {
 
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
+        /// <summary>Set of Trips including Days and Events</summary>
+        /// <returns></returns>
+        public IQueryable<Trip> TripIncludes
+            => Trip.Include(A => A.Days.OrderBy(A => A.Index)).ThenInclude(A => A.Events.OrderBy(A => A.Index));
+
+        /// <summary>Set of Trips that are public</summary>
+        /// <returns></returns>
+        public IQueryable<Trip> PublicTrips => TripIncludes
+            .Where(A => A.Public);
+
         /// <summary>Gets the trips of a given User</summary>
         /// <param name="Username">Username</param>
         /// <returns></returns>
-        public IQueryable<Trip> UserTrips(string Username) => Trip
-            .Include(A=>A.Days.OrderBy(A=>A.Index)).ThenInclude(A=>A.Events.OrderBy(A=>A.Index))
+        public IQueryable<Trip> UserTrips(string Username) => TripIncludes
             .Where(A => A.Owner != null && A.Owner.Username == Username);
+
+        /// <summary>Gets all trips that have been shared with this user</summary>
+        /// <param name="Username"></param>
+        /// <returns></returns>
+        public IQueryable<Trip> UserSharedTrips(string Username) => TripShareData
+            .Where(A=>A.User != null && A.User.Username == Username && A.Trip!=null)
+            .Include(A => A.Trip)
+            .ThenInclude(A => A!.Days.OrderBy(A => A.Index))
+            .ThenInclude(A => A!.Events.OrderBy(A => A.Index))
+            .Select(A=>A.Trip)!;
 
     }
 }
