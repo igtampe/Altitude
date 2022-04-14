@@ -1,4 +1,5 @@
 ﻿using Igtampe.ChopoAuth;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Igtampe.Altitude.Common {
     
@@ -33,6 +34,7 @@ namespace Igtampe.Altitude.Common {
         public List<Day> Days { get; set; } = new();
 
         /// <summary>List of warnings for all days</summary>
+        [NotMapped]
         public List<Warning> Warnings => Validate();
 
         private List<Warning> Validate() {
