@@ -27,6 +27,9 @@ namespace Igtampe.Altitude.Common {
         /// <summary>Whether or not this trip is public or not</summary>
         public bool Public { get; set; } = false;
 
+        /// <summary>ShareData for this trip</summary>
+        public List<TripShareData> ShareData { get; set; } = new();
+
         /// <summary>The date this trip starts on</summary>
         public DateTime StartDate { get; set; } = DateTime.UtcNow;
 
