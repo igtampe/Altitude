@@ -32,6 +32,7 @@ namespace Igtampe.Altitude.Common {
         /// <summary>Days this trip contains</summary>
         public List<Day> Days { get; set; } = new();
 
+        /// <summary>List of warnings for all days</summary>
         public List<Warning> Warnings => Validate();
 
         private List<Warning> Validate() {
@@ -39,6 +40,5 @@ namespace Igtampe.Altitude.Common {
             foreach (var item in Days) { Warns.AddRange(item.Validate()); }
             return Warns;
         } 
-
     }
 }

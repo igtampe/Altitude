@@ -21,6 +21,8 @@
         /// <summary>List of events that occur this day</summary>
         public List<Event> Events { get; set; } = new();
 
+        /// <summary>Gets list of warnings for this day</summary>
+        /// <returns></returns>
         public List<Warning> Validate() {
 
             List<Warning> Warns = new();
@@ -41,7 +43,6 @@
                         Message = $"{TimedEvents[i - 1].Name} starts after {TimedEvents[i].Name}'s reminder time"
                     });
                 }
-
             }
 
             for (int i = 0; i < Events.Count; i++) {
@@ -54,6 +55,5 @@
 
             return Warns;
         }
-
     }
 }
