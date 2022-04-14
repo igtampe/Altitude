@@ -16,6 +16,12 @@ namespace Igtampe.Altitude.Common {
         /// <summary>Image of this Event</summary>
         public string ImageURL { get; set; } = "";
 
+        /// <summary>Color associated to this event</summary>
+        public string Color { get; set; } = "";
+
+        /// <summary>Icon associated to this event</summary>
+        public int Icon { get; set; } = 0;
+
         /// <summary>Index of this event</summary>
         public int Index { get; set; } = 0;
 
